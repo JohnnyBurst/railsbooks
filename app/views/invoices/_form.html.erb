@@ -111,7 +111,7 @@
             <tr>
               <th>Total:</th>
               <td class="balance"><span class="due" id="invoice_total">875.00</span><span class="subtotal_currency"></span></td>
-              <%=f.hidden_field :amount, id: "invoice_total" %>
+              <%=f.hidden_field :amount, id: "invoice_total1" %>
             </tr>
           </table>
         </div>
@@ -131,10 +131,11 @@
     <div class="modal-content" style="width:920px">
       <div class="container-fluid invoice_wrapper" style="margin:10px" id="print-me">
         <%= render 'invoice' %>
-      </div>
-      <div class="modal-footer">
+        <div class="modal-footer">
         <button class="btn btn-primary" onclick="printDiv('print-me')">Print</button>
       </div>
+      </div>
+
     </div>
   </div>
 </div>
