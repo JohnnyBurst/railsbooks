@@ -14,6 +14,7 @@ gem 'simple_form', '~> 3.0.0.rc'
 gem 'themify-icons-rails'
 gem 'ransack'
 gem 'tax_cloud'
+gem 'will_paginate'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
