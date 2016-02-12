@@ -32,7 +32,7 @@
           <table class="table table-hover table-bordered">
             <thead>
               <tr>
-                <th>Company</th>
+                <th>Client</th>
                 <th>Salesperson</th>
                 <th>Amount</th>
                 <th>Date</th>
@@ -47,16 +47,14 @@
                   <td><%= invoice.salesperson %></td>
                   <td><%= invoice.amount %></td>
                   <td><%= invoice.date %></td>
-                  <td><%= link_to 'Show', invoice %></td>
-                  <td><%= link_to 'Edit', edit_invoice_path(invoice) %></td>
-                  <td><%= link_to 'Destroy', invoice, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                  <td><%= link_to 'Display', invoice %></td>
                 </tr>
               <% end %>
             </tbody>
           </table>
         </div>
       <div class="panel-footer">
-       
+       <%= will_paginate @invoices, renderer: BootstrapPagination::Rails, previous_label: "Older", next_label: "Newer", inner_window: 1, outer_window:0  %>
       </div>
       </div>
     </div>
@@ -66,4 +64,3 @@
 
 
 <br>
-

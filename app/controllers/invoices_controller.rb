@@ -6,6 +6,7 @@ class InvoicesController < ApplicationController
   def index
     @search = Invoice.search(params[:q])
     @invoices = @search.result
+    @invoices = Invoice.all.order("created_at DESC").paginate(page: params[:page], per_page: 8)
   end
 
   def search
